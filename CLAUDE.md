@@ -10,7 +10,7 @@ Zenn・Qiita向けの外部記事執筆用リポジトリ。Markdown記事の品
 
 ## Lint ツール
 
-**pre-commitフック**と**GitHub Actions**で品質を強制します。`git commit`時にステージされたMarkdownファイルが自動チェックされます。
+**pre-commitフック**で品質を強制します。`git commit`時にステージされたMarkdownファイルが自動チェックされます。
 
 ### 利用可能なコマンド
 
@@ -21,20 +21,6 @@ Zenn・Qiita向けの外部記事執筆用リポジトリ。Markdown記事の品
 | `npm run lint:text` | 日本語文章校正（textlint） |
 | `npm run lint:links` | リンク切れチェック（遅め、手動実行用） |
 | `npm run lint:fix` | 自動修正できるものを修正 |
-
-### 設定ファイル
-
-- `.markdownlint.json` - Markdown構文ルール
-- `.textlintrc.json` - 日本語文章ルール（preset-ja-technical-writing）
-- `.linkcheck.json` - リンク検証ルール
-
-### Pre-commitのスキップ
-
-Pre-commitフックをスキップする場合（非推奨）：
-
-```bash
-git commit --no-verify
-```
 
 ---
 
@@ -52,14 +38,6 @@ git commit --no-verify
 - `public/` 配下の `private: false` 記事を自動投稿
 - Lint成功後のみ実行
 - 初回セットアップ: リポジトリSecretsに `QIITA_TOKEN` を設定
-
-### CIフロー
-
-```
-push → Lint → (成功) → Qiita自動投稿
-            ↓
-          Zenn自動同期
-```
 
 ---
 
