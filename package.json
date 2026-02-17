@@ -1,0 +1,29 @@
+{
+  "name": "article",
+  "version": "1.0.0",
+  "description": "External article writing repository",
+  "scripts": {
+    "lint": "npm run lint:md && npm run lint:text",
+    "lint:md": "markdownlint \"articles/**/*.md\" \"public/**/*.md\"",
+    "lint:text": "textlint \"articles/**/*.md\" \"public/**/*.md\"",
+    "lint:links": "markdown-link-check \"articles/**/*.md\" \"public/**/*.md\" --config .linkcheck.json",
+    "lint:fix": "npm run lint:md -- --fix && npm run lint:text -- --fix",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "{articles,public}/**/*.md": [
+      "markdownlint --fix",
+      "textlint --fix",
+      "markdown-link-check --config .linkcheck.json"
+    ]
+  },
+  "devDependencies": {
+    "@qiita/qiita-cli": "^1.7.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "markdown-link-check": "^3.14.2",
+    "markdownlint-cli": "^0.47.0",
+    "textlint": "^15.5.1",
+    "textlint-rule-preset-ja-technical-writing": "^12.0.2"
+  }
+}

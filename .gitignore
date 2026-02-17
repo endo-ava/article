@@ -1,0 +1,9 @@
+.remote
+node_modules
+
+# Local settings
+*.local.json
+settings.local.json
+
+# Husky internal templates
+.husky/_

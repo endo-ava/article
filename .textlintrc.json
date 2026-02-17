@@ -1,0 +1,17 @@
+{
+  "filters": {},
+  "rules": {
+    "preset-ja-technical-writing": {
+      "sentence-length": {
+        "max": 120
+      },
+      "max-ten": {
+        "max": 5
+      },
+      "no-mix-dearu-desu": true,
+      "ja-no-mixed-period": {
+        "periodMark": "。"
+      }
+    }
+  }
+}

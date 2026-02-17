@@ -1,0 +1,15 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^http://localhost",
+      "message": "Localhost links are skipped"
+    },
+    {
+      "pattern": "^https://github.com/",
+      "message": "GitHub links require authentication, skipping"
+    }
+  ],
+  "retryOn429": true,
+  "retryCount": 5,
+  "fallbackRetryDelay": 5000
+}
