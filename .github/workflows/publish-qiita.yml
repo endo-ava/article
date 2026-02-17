@@ -1,4 +1,4 @@
-name: publish to Qiita
+name: Publish to Qiita
 
 on:
   push:
@@ -12,6 +12,7 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
+jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
