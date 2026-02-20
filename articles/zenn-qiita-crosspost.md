@@ -75,7 +75,7 @@ ZennとQiitaでFront Matterの形式が違うので、最初は別ファイル�
 
 publicでもprivateでもどちらでも構いません。READMEなどのいったんすべて不要でOKです。
 
-![ZennのGitHub連携設定画面](../images/zenn-qiita-crosspost/01.png)
+![ZennのGitHub連携設定画面](/images/zenn-qiita-crosspost/01.png)
 
 ### 2. Zenn の作業
 
@@ -85,11 +85,11 @@ Zennは公式でGitHub連携を提供しているので、設定はとてもシ�
 
 Zennの設定画面から「GitHub連携」-> 「リポジトリを連携する」を選択します
 
-![ZennのGitHub連携設定画面](../images/zenn-qiita-crosspost/02.png)
+![ZennのGitHub連携設定画面](/images/zenn-qiita-crosspost/02.png)
 
 「Only select repositories」-> 連携したいリポジトリ を選択し、「Install & Authrize」。
 
-![ZennのGitHub連携設定画面](../images/zenn-qiita-crosspost/03.png)
+![ZennのGitHub連携設定画面](/images/zenn-qiita-crosspost/03.png)
 
 > **補足**: Zenn CLIというツールもありますが、今回はWeb設定のみで完結するので使用してません。また、Zennは**連携できるリポジトリが最大2つ**という制約がります。
 
@@ -103,19 +103,19 @@ QiitaはGitHub連携が提供されていないので、Qiita CLIとGitHub Actio
 
 Qiitaの設定画面から「アプリケーション」-> 「新しくトークンを発行する」を選択します。
 
-![Qiitaのトークン発行画面](../images/zenn-qiita-crosspost/05.png)
+![Qiitaのトークン発行画面](/images/zenn-qiita-crosspost/05.png)
 
 必要な権限（read_qiita、write_qiita）を付与して発行します。アクセストークンの説明は自分が分かれば何でもよいです。
 
 発行したトークンは再表示できないため大切に保管します。
 
-![Qiitaのトークン発行画面](../images/zenn-qiita-crosspost/06.png)
+![Qiitaのトークン発行画面](/images/zenn-qiita-crosspost/06.png)
 
 ### 3.2. GitHub Secretsにトークンを登録
 
 連携したいリポジトリのSettings → Secrets and variables → Actions から、`QIITA_TOKEN` という名前で、前述で発行したトークンを登録します。
 
-![GitHub Secrets設定画面](../images/zenn-qiita-crosspost/07.png)
+![GitHub Secrets設定画面](/images/zenn-qiita-crosspost/07.png)
 
 ### 3.3. GitHub Actionsの設定
 
@@ -215,21 +215,21 @@ mainブランチにて「`git push`」することで、Zenn / Qiita の自動�
 
 Zennでテスト記事投稿成功🎉
 
-![Zennに投稿された記事](../images/zenn-qiita-crosspost/08.png)
+![Zennに投稿された記事](/images/zenn-qiita-crosspost/08.png)
 
 Qiitaでテスト記事投稿成功🎉
 
-![Qiitaに投稿された記事](../images/zenn-qiita-crosspost/09.png)
+![Qiitaに投稿された記事](/images/zenn-qiita-crosspost/09.png)
 
 補足として、Zenn側でデプロイが成功すると、通知が来ます。
 
-![Zennのデプロイ成功通知](../images/zenn-qiita-crosspost/10.png)
+![Zennのデプロイ成功通知](/images/zenn-qiita-crosspost/10.png)
 
 また、Qiita側では、CIによりQiitaCLIが以下のようなコミットを発行してきます。
 
 主にFront Matterの自動設定コミットで、UUIDなどが自動で付与されます。
 
-![投稿後のYAML差分](../images/zenn-qiita-crosspost/11.png)
+![投稿後のYAML差分](/images/zenn-qiita-crosspost/11.png)
 
 ### 注意2: 記事ファイル名の注意点
 

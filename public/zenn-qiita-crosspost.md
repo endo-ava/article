@@ -5,7 +5,6 @@ tags:
   - Zenn
   - Qiita
   - CICD
-  - 記事執筆
   - 初投稿
 private: false
 updated_at: ""
