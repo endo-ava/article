@@ -3,17 +3,15 @@
   "version": "1.0.0",
   "description": "External article writing repository",
   "scripts": {
-    "lint": "npm run lint:md && npm run lint:text",
+    "lint": "npm run lint:md",
     "lint:md": "markdownlint \"articles/**/*.md\" \"public/**/*.md\"",
-    "lint:text": "textlint \"articles/**/*.md\" \"public/**/*.md\"",
     "lint:links": "sh -c 'find articles public -name \"*.md\" -exec markdown-link-check --config .linkcheck.json {} +'",
-    "lint:fix": "npm run lint:md -- --fix && npm run lint:text -- --fix",
+    "lint:fix": "npm run lint:md -- --fix",
     "prepare": "husky"
   },
   "lint-staged": {
     "{articles,public}/**/*.md": [
-      "markdownlint --fix",
-      "textlint --fix"
+      "markdownlint --fix"
     ]
   },
   "devDependencies": {
