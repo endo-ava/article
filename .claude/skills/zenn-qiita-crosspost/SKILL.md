@@ -112,6 +112,9 @@ git push
 # CLIで雛形作成
 npx qiita init
 
+# ローカルプレビュー
+npx qiita preview
+
 # 手動投稿
 npx qiita publish
 
